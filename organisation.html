@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<title>Document Management System</title>
+
+	<link href="css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+
+	.card{
+		padding: 10px 20px;
+	}
+	::-webkit-scrollbar {
+  width: 8px;
+}
+.card-header{
+	padding:1rem 0rem 0rem 1rem;
+}
+.card-body{
+	padding:1rem 0rem 0rem 1rem;
+}
+#status{
+    margin-top: 20px;
+    width: 50px;
+    height: 20px;
+}
+.thirdRow{
+    margin-top: 40px;
+}
+.secondRow{
+    margin-top: 40px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+.errormsg {
+  color: red;
+
+  display: none;
+}
+</style>
+  <body>
+    <div class="wrapper">
+
+<!-------------------------------navbar Start----------------------------------->
+		<nav id="sidebar" class="sidebar js-sidebar">
+		<div class="sidebar-content js-simplebar">
+
+		    <a class="sidebar-brand" href="index.html"><span class="align-middle">DMS</span></a>
+
+			<ul class="sidebar-nav">
+				<li class="sidebar-header">Masters</li>
+
+				<li class="sidebar-item ">
+               <a class="sidebar-link" href="index.html"><i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span></a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="login.html">
+					  <i class="align-middle" data-feather="log-in"></i>
+					  <span class="align-middle">Login</span>
+					</a>
+				  </li>
+	  
+				  <li class="sidebar-item">
+					<a class="sidebar-link" href="register.html">
+					  <i class="align-middle" data-feather="user-plus"></i>
+					  <span class="align-middle">User Create</span>
+					</a>
+				  </li>
+
+			  <li class="sidebar-item">
+			<a class="sidebar-link" href="document-add.html"><i class="align-middle" data-feather="file"></i> <span class="align-middle">Add Document</span></a>
+					</li>
+
+			
+            <li class="sidebar-item active">
+                <a class="sidebar-link " href="organisation.html"><i class="align-middle" data-feather="file"></i> <span class="align-middle">Organisation</span></a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="users.html"><i class="align-middle" data-feather="file"></i> <span class="align-middle">Users</span></a>
+                    </li>
+					<li class="sidebar-item ">
+						<a class="sidebar-link" href="lookup.html"><i class="align-middle" data-feather="file"></i> <span class="align-middle">Lookup</span></a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="document-listing.html"
+							  ><i class="align-middle" data-feather="file"></i>
+							  <span class="align-middle">Document listing</span></a
+							>
+						  </li>
+						  <li class="sidebar-item  ">
+							<a class="sidebar-link" href="organisation-listing.html"
+							  ><i class="align-middle" data-feather="file"></i>
+							  <span class="align-middle">Organisation listing</span></a
+							>
+							</li>
+							<li class="sidebar-item  ">
+								<a class="sidebar-link" href="lookup-listing.html"
+								  ><i class="align-middle" data-feather="file"></i>
+								  <span class="align-middle">Lookup listing</span></a
+								>
+								</li>
+								<li class="sidebar-item  ">
+								  <a class="sidebar-link" href="user-listing.html"
+									><i class="align-middle" data-feather="file"></i>
+									<span class="align-middle">User listing</span></a
+								  >
+								  </li>
+        </ul>
+			</div>
+		</nav>
+
+<!-------------------------------Navbar End----------------------------------->
+
+      <div class="main">
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+
+		  <span style="font-size: 23px;">Organisation Name</span>
+		  
+          <div class="navbar-collapse collapse">
+			  
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item dropdown">
+				<div>Username: Sakshi Kumari</div>
+				<div>Last login date: 05/04/2023</div>
+			  </li>
+            </ul>
+          </div>
+        </nav>
+
+<!-------------------------------Main start----------------------------------->
+        <main class="content">
+
+          <div class="container-fluid p-0">
+
+            <div class="mb-3"> <h1 class="h3 d-inline align-middle">Organisation Master</h1></div>
+			<div class="card">
+            <div class="row firstRow">
+              <div class="col-lg-4">
+                
+                  <div class="card-header"><h5 class="card-title mb-0">Organisation Name</h5> </div>
+                  <div class="card-body">
+              <input type="text" class="form-control" placeholder="Enter Organisation Name" id="orgName" name="orgName" />
+			  <p class="errormsg" id="nameError">Please Enter organisation Name</p>
+                  </div>
+				</div>
+
+	      	<div class="col-lg-4">
+			<div class="card-header"><h5 class="card-title mb-0">Organisation Logo</h5></div>
+						<div class="card-body">
+						  <input id="orgLogo" type="file" class="form-control" name="orgLogo" />
+						  <p class="errormsg" id="filesError">Please Upload Your logo</p>
+						</div>
+				  </div>
+
+				  <div class="col-lg-4">
+					<div class="card-header"><h5 class="card-title mb-0" > Status </h5><div><input type="checkbox" name="status" id="status"></div></div><p class="errormsg" id="statusError">Please select status</p>
+					<div class="card-body"> 
+					</div>
+			</div>
+
+		 </div>
+
+			  <div class="row secondRow">
+				<div class="col-lg-4">
+					<div class="card-header"><h5 class="card-title mb-0">Organisation Departments</h5></div>
+					<div class="card-body" id="orgDepartments" name="orgDepartments">
+						<div id="deptDiv"  style="border: 1px solid #ced4da;border-radius: 0.2rem; padding: 0.3rem 0.85rem;max-height:120px;overflow-y: scroll;">
+			    	</div><p class="errormsg" id="deptError">Please select a department</p>
+					</div>
+					</div>
+
+
+				<div class="col-lg-4">
+				<div class="card-header"><h5 class="card-title mb-0">Organisation Branches</h5></div>
+				<div class="card-body" id="orgBranches">	
+					<div id="branchDiv"  style="border: 1px solid #ced4da;border-radius: 0.2rem; padding: 0.3rem 0.85rem;max-height:120px;overflow-y: scroll;">
+					</div><p class="errormsg" id="branchError">Please select a branch</p>
+				  </div>
+				  </div>
+
+				  <div class="col-lg-4">
+					<div class="card-header"><h5 class="card-title mb-0">Organisation Description</h5></div>
+					<div class="card-body">
+					 <textarea class="form-control" rows="3" placeholder="Enter the description" id="orgDescription" style="min-height: 120px;overflow-y: scroll;"></textarea>
+					 <p class="errormsg" id="descError">Please enter the description </p>
+					</div>
+				  </div>
+
+			  </div>
+
+			 
+		
+			  <div class="row thirdRow">
+				<div class="col-lg-4">
+		         <div class="card-header"><h5 class="card-title mb-0">Organisation Notifications</h5></div>
+				<div class="card-body" id="orgNotification">
+			 <div id="notiDiv"  style="border: 1px solid #ced4da;border-radius: 0.2rem; padding: 0.3rem 0.85rem;max-height:120px;overflow-y: scroll;">
+				</div>	<p class="errormsg" id="notiError">Please select a notification</p>
+				  </div> 
+				</div>
+
+				<div class="col-lg-4">
+						<div class="card-header"><h5 class="card-title mb-0">Organisation Settings</h5></div>
+						<div class="card-body" id="orgSetings">	
+							<div id="setiDiv"  style="border: 1px solid #ced4da;border-radius: 0.2rem; padding: 0.3rem 0.85rem;max-height:120px;overflow-y: scroll;">
+							</div><p class="errormsg" id="setError">Please select a setting</p>
+						</div>
+					</div>
+					
+				
+<div class="row mt-5">
+	<div class="col-12" style="padding: 10px 10px;text-align: center;">
+		<button Style="width:140px; font-size:17px; background-color:rgb(28, 58, 102);color:white; border-radius: 10px; height: 34px;" onclick="validation()">Submit</button></div>
+</div>
+		 
+</main>
+
+	
+	
+<!-------------------------------Main End----------------------------------->
+
+<!-------------------------------Footer Start----------------------------------->
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a class="text-muted" href="https://www.albertsons.co.in/" target="_blank"><strong>©2022-2023 Albertsons International Private Limited, All Rights Reserved.  </strong></a> 
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://www.albertsons.co.in/" target="_blank">Customer Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="index.html" target="_blank">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			</div>
+		</div>
+		
+<!-------------------------------Footer End----------------------------------->
+		
+      </div>
+    </div>
+
+<!-------------------------------Script----------------------------------->
+<script src="./js/organisation.js"></script>
+<!-- <script src="./js/document-add.js"></script> -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
